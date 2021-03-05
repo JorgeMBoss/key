@@ -1,25 +1,42 @@
 {
-    "name": "Keycloak Deployment to Heroku",
-    "description": "Deployment of the Keycloak Identity and Access Management Solution to Heroku using a slightly adapted version of the official Docker container image",
-    "keywords": [
-        "identity",
-        "oauth",
-        "saml",
-        "keycloak",
-        "heroku"
+    "addons": [
+        {
+            "plan": "heroku-postgresql:hobby-dev"
+        }
     ],
-    "stack": "container",
-    "repository": "https://github.com/JorgeMBoss/key",
-    "logo": "https://www.keycloak.org/resources/images/keycloak_logo_480x108.png",
-    "success_url": "/",
+    "description": "Deployment of the Keycloak Identity and Access Management Solution to Heroku using a slightly adapted version of the official Docker container image",
     "env": {
-        "KEYCLOAK_USER": {
-            "description": "Initial Admin user name",
-            "value": "admin"
+        "DB_ADDR": {
+            "description": "tanto faz",
+            "value": "postgres"
+        },
+        "DB_DATABASE": {
+            "description": "tanto faz",
+            "value": "keycloak"
+        },
+        "DB_PASSWORD": {
+            "description": "tanto faz",
+            "value": "password"
+        },
+        "DB_SCHEMA": {
+            "description": "tanto faz",
+            "value": "public"
+        },
+        "DB_USER": {
+            "description": "tanto faz",
+            "value": "keycloak"
+        },
+        "DB_VENDOR": {
+            "description": "tanto faz",
+            "value": "POSTGRES"
         },
         "KEYCLOAK_PASSWORD": {
-            "description": "Initial Admin password",
+            "description": "tanto faz",
             "value": "Pa55w0rd"
+        },
+        "KEYCLOAK_USER": {
+            "description": "tanto faz",
+            "value": "admin"
         },
         "PROXY_ADDRESS_FORWARDING": {
             "description": "Set to true since we will be running behind Heroku's load balancers",
@@ -32,9 +49,16 @@
             "size": "Free"
         }
     },
-    "addons": [
-        {
-            "plan": "heroku-postgresql:hobby-dev"
-        }
-    ]
+    "keywords": [
+        "identity",
+        "oauth",
+        "saml",
+        "keycloak",
+        "heroku"
+    ],
+    "logo": "https://www.keycloak.org/resources/images/keycloak_logo_480x108.png",
+    "name": "Keycloak Deployment to Heroku",
+    "repository": "https://github.com/JorgeMBoss/key",
+    "stack": "container",
+    "success_url": "/"
 }
