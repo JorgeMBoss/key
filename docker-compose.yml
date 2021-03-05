@@ -1,4 +1,4 @@
-version: '3'
+#version: '3'
 # from: https://github.com/keycloak/keycloak-containers/blob/master/docker-compose-examples/keycloak-postgres.yml
 
 volumes:
