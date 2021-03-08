@@ -1,12 +1,5 @@
-FROM jboss/keycloak:7.0.1
-
-COPY docker-entrypoint.sh /opt/jboss/tools
-
-ENTRYPOINT [ "/opt/jboss/tools/docker-entrypoint.sh" ]
-CMD ["-b", "0.0.0.0"]
-
-
-
-
-
+FROM jboss/keycloak:12.0.4
+EXPOSE 8080:8080
+ENV KEYCLOAK_USER=admin
+ENV KEYCLOAK_PASSWORD=admin
 
