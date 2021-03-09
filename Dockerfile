@@ -1,5 +1,0 @@
-FROM quay.io/keycloak/keycloak:12.0.4
-EXPOSE 8080:8080
-ENV KEYCLOAK_USER=admin
-ENV KEYCLOAK_PASSWORD=admin
-
